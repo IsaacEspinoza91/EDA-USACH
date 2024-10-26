@@ -1,0 +1,19 @@
+MultMatricesCuadradas(matriz A, matrizB): matriz
+
+	n <- orden_matriz(A)
+	C <- matriz cuadrada nxn con elementos ceros
+	PARA i<- 1 HASTA n	...iteracion filas
+		PARA j<- 1 HASTA n	...iteracion columnas
+			PARA k<-1 HASTA n	...iteracion entre los elementos para suamrlos
+				C[i][j] <- C[i][j] + A[i][k]*B[k][j]
+	DEVOLVER(C)
+
+SumaMatrices(matriz A, matriz B): matriz
+	filas <- obtener filas matrices			... A y B tienen el mismo tamanio
+	columnas <- obtener columnas matrices
+	C <- matriz de filasXcolumnas llena de ceros 	...matriz del mismo tamanio de A
+	PARA f<- 1 HASTA filas
+		PARA c <- 1 HASTA columnas
+			C[f][c] = C[f][c] + A[f][c]+B[f][c]
+	DEVOLVER(C)
+			

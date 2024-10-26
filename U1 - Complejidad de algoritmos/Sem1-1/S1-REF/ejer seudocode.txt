@@ -1,0 +1,23 @@
+Construir un algoritmo, en seudocódigo, para que dadas dos matrices A y B de orden nxn, retorne la matriz C=A+B
+
+
+
+sumaMatricesCuadradas(matriz A, matriz B): matriz
+    n = obtenerOrdenMatriz(A)   ... ambas matrices son de igual orden n
+    matrizNueva <- matriz nxn con elementos 0
+    para i<-1 hasta n
+        para j<-1 hasta n
+            matrizNueva[i][j] <- A[i][j] + B[i][j]               ... primero se recorre la fila, luego la columna
+    devolver(matrizNueva)
+
+
+
+
+
+
+
+
+
+
+
+Construir un algoritmo, en seudoc[odigo, para que dadas dos matrices A y B de orden nxn, retorne la matriz C=A+B]

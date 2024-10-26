@@ -1,0 +1,17 @@
+fun1(num n1, num n2): num
+	si n1<n2 entonces
+		devolver(n1)
+	si n1>n2 entonces
+		devolver(n2)
+
+fun2(num n1, num n2): num
+	suma ← n1 + n2
+	devolver(suma)
+
+fun3(num n): num
+	acum ← 0
+	i ← 0
+	mientras i<=n hacer
+		acum ← acum + i
+		i ← i + 1
+	devolver(acum)

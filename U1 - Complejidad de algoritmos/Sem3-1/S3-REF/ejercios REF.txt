@@ -1,0 +1,63 @@
+1 Se tiene una secuencia de 2n números enteros no necesariamente distintos.
+Escribir un algoritmo en seudocódigo de orden O(n log n) que reciba una secuencia
+de 2n números y que muestre aquella partición que maximiza la máxima suma de
+un par formado por números de la secuencia de entrada
+Por ejemplo, se tiene la secuencia es (5,3,1,9). Las particiones posibles son
+((5,3),(1,9)), ((5,1),(3,9)), y ((5,9),(3,1)). La suma por pares de dichas particiones son
+(8,10), (6,12), y (14,4). Por lo tanto, la tercera partición ((5,9),(3,1)) tiene 14 como
+su suma máxima, la cual es la máxima de las sumas máximas respecto a las otras
+dos particiones.
+Calcular el orden de complejidad del algoritmo propuesto, y justificar cómo se
+respeta la complejidad solicitada
+
+
+
+
+
+
+
+
+
+
+
+
+2
+El rango establece la proximidad de los datos de una colección, restando al
+dato mayor el dato menor. Por ejemplo, el rango de la colección {4,6,2,4,3,1}
+es 5. Escribir un algoritmo en seudocódigo que calcule y retorne el rango de
+una colección de n números.
+En base a los antecedentes anteriores, para responder esta pregunta se pide:
+• Escribir un algoritmo eficiente para resolver el problema planteado
+• Calcular la complejidad del algoritmo propuesto
+• Justificar la complejidad obtenida
+
+
+IDEA* podria usar un algoritmo de ordenamiento y al ultimo elemento(el mayor) restarle
+el primero(el menor). Pero el algoritmo seria O(n^2) 
+IDEA2* iterar entre todos los elementos y compararlos guardando el numero mayor y el menor
+luego hago la operacion
+
+RangoProximidad(array de numeros A): num
+	n <- largo_array(A)
+	valorMayor <- A[0]	...defino al primer elemento como pivote para compara los siguientes
+	valorMenor <- A[0]
+	PARA i<- 2 HASTA n
+		SI A[i]<valorMenor ENTONCES
+			valorMenor <- A[i]
+		SI A[i]>valorMayor ENTONCES
+			valorMayor <- A[i]
+	resultado <- valorMayor - valorMenor
+	DEVOLVER(resultado)
+							O(n) Orden lineal
+
+
+
+
+PEP 1/2023
+Existe la función voltear(A,i) que revierte el arreglo A desde la posición 1
+hasta i. Considerando esta operación, escribir un algoritmo para ordenar
+decrecientemente un arreglo A de n enteros desordenados. Solo se puede
+usar la operación voltear y no se pueden ocupar arreglos auxiliares. La
+idea es ocupar la menor cantidad de volteretas para ordenar el arreglo.
+¿Cuál es la complejidad del algoritmo propuesto?
+

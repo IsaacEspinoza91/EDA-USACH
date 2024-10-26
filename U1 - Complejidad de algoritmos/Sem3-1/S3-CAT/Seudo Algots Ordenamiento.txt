@@ -1,0 +1,32 @@
+SelectionSort(array de numeros A): array de numeros
+	n <- largo_array(A)
+	PARA i<-1 HASTA n-1
+		valorMenor <- A[i]
+		indiceMenor <- i
+		PARA j<- i+1 HASTA n
+			SI A[j]<valorMenor ENTONCES
+				valorMenor <- A[j]
+				indiceMenor <- j
+		intercambiar(A , i, indiceMenor)
+	DEVOLVER(A)
+	
+
+InsertionSort(array de numeros A): array de numeros
+	n <- largo_array(A)
+	PARA i<-2 HASTA n
+		j <- i
+		MIENTRAS j>=2 Y A[j-1]>A[j] HACER
+			intercambiar(A, j, j-1)
+			j <- j - 1
+	DEVOLVER(A)
+
+
+BubbleSort(array de numeros A): array de numeros
+	n <- largo_array(A)
+	PARA i<-n HASTA 1 PASO -1
+		PARA j<- 1 HASTA i-1
+			SI A[j]>A[j+1] ENTONCES
+				intercambio(A, j, j+1)
+	DEVOLVER(A)
+
+

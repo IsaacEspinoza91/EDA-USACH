@@ -1,0 +1,38 @@
+Ejercicios propuestos
+1. Construir un algoritmo iterativo y otro recursivo para calcular la sumatoria de los n primeros enteros positivos. Para cada algoritmo, plantear el T(n) y calcular el orden de complejidad
+
+
+	sumatoIte(num n): num
+		resul <- 0				c
+		para i <- 1 hasta n			3c
+			resul <- resul + i		2c
+		devolver(resul)				c
+
+	T(n)= 2c+n5c   entonces O(n)  orden lineal
+
+
+		
+
+
+
+	sumatoRec(num n): num
+		si n=0 entonces				c
+			devolver(0)			c
+		valor <- n + sumatoRec(n-1)
+		devolver(valor)
+
+	primero la ecuacion de recurrencia T(n)= {c1    en condicion de termino (n=0); c2 + T(n mod)      otro caso
+	entonces    T(n)= {2c     n=0; 4c + T(n-1)
+		REDUCCION POR SUSTRACCION  T(n)= 1*T(n-1)+O(1)     donde a=1, b=1, k=0
+		entonces       O(n^(0+1))= O(n)    ORDEN LINEAL
+
+
+
+
+2. Calcular la complejidad de la siguiente ecuacion de recurrencia usando reduccion
+	T(0) = c
+	ORDEN CONSTANTE?
+
+	T(n) <= n+T(n-1)
+	Notamos a=1, b=1, y k=1, ya que n^k = n, y luego O(n)    entonces o(n^2)    ORDEN CUADRATICO
+

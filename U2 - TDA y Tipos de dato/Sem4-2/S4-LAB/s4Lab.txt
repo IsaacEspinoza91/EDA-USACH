@@ -1,0 +1,1 @@
+el lab era crea el TDA pixel y crear algunas funciones con este.
